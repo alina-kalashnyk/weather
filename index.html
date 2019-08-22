@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgb(41, 150, 170), rgb(48, 62, 165));
+            font-family: sans-serif;
+            color: #ffffff;
+        }
+
+        .location,
+        .temperature {
+            height: 30vh;
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .temperature {
+            flex-direction: column;
+        }
+        .degree-section {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .degree-section span {
+            margin: 10px;
+            font-size:  30px;
+        }
+        .degree-section h2 {
+            font-size: 40px;
+        }
+
+    </style>
+    <title>Weather</title>
+</head>
+<body>
+<div class="location">
+    <h1 class="location-timezone">Timezone</h1>
+    <canvas class="icon" width="128" height="128"></canvas>
+</div>
+<div class="temperature">
+    <div class="degree-section">
+        <h2 class="temperature-degree">XX</h2>
+        <span>°F</span>
+    </div>
+    <div class="temperature-description"></div>
+</div>
+
+<script src="skycons/skycons.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
